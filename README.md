@@ -1,10 +1,10 @@
 # NIH AI Workshop2: Cancer Site/Type classification using Convolutional Neural Network
 **S.Ravichandran**
 
-Click **predict-drugclass.ipynb** above to view a static Python JupyterNotebook.
+Click **TC1-dataprep.ipynb** above to view a static Python JupyterNotebook.
 
 
-Click Binder link below to begin tutorial using the dynamic version of **predict-drugclass.ipynb**. 
+Click Binder link below to begin tutorial using the dynamic version of **TC1-dataprep.ipynb**. 
 
 ***Please note that binder server setup on the cloud will take < 3 minutes at most. You will first see a Binder page with some log messages. After the setup, you will see an instance of Jupyer notebook in your browser. Click the Jupyter notebook, predict-drugclass.ipynb, to begin the tutorial***.
 
