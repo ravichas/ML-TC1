@@ -1,4 +1,4 @@
-# NIH AI Workshop1: Generating Molecular Features for Drug Function Classification
+# NIH AI Workshop2: Cancer Site/Type classification using Convolutional Neural Network
 **S.Ravichandran**
 
 Click **predict-drugclass.ipynb** above to view a static Python JupyterNotebook.
