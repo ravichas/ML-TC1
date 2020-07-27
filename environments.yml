@@ -1,12 +1,6 @@
-name: p37-keras
-channels:
-  - bioconda
-  - conda-forge
-  - defaults
-dependencies:
-  - python=3.7
-  - jupyterlab
-  - scikit-learn
-  - pandas
-  - pillow
+python
+jupyterlab
+scikit-learn
+pandas
+pillow
 
