@@ -76,7 +76,7 @@
  pytz
  pywin32
  pywinpty
- pyzmq=19.0.1
+ pyzmq
  requests
  scikit-learn
  scipy
