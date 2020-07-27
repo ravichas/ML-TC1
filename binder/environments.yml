@@ -1,0 +1,12 @@
+name: p37-keras
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - jupyterlab
+  - scikit-learn
+  - pandas
+  - pillow
+prefix: C:\Users\ravichandrans\AppData\Local\Continuum\anaconda3\envs\p37-keras
