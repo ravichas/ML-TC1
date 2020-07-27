@@ -9,4 +9,4 @@ dependencies:
   - scikit-learn
   - pandas
   - pillow
-prefix: C:\Users\ravichandrans\AppData\Local\Continuum\anaconda3\envs\p37-keras
+
