@@ -12,4 +12,4 @@ To begin:
   * *Binder does not work with Safari on Mac OS, instead use the Chrome browser. If you are on Windows, please use Chrome.*
 
 
-* If you have trouble with Binder, click either **TC1-dataprep.ipynb** or **TC1-ConvNN.ipynb** above to view a static Python JupyterNotebooks.
+* If you have trouble with Binder, click either **TC1-dataprep.ipynb** or **TC1-ConvNN.ipynb** above to view a static Python JupyterNotebook.
