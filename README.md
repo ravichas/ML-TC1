@@ -1,6 +1,8 @@
 ## *Cancer Site/Type classification using Convolutional Neural Network*
 *Presented by S. Ravichandran, Ph.D., BIDS, Frederick National Laboratory for Cancer Research (FNLCR)*
 
+This document will explain how to use genomic expression data for classifying different cancer/tumor sites/types. This workshop is a follow-up to the NCI-DOE Pilot1 benchmark also called TC1. You can read about the project here, https://github.com/ECP-CANDLE/Benchmarks/tree/master/Pilot1/TC1
+
 To begin: 
 
 * Click the launch Binder button below to begin tutorial using the dynamic versions of **TC1-dataprep.ipynb** and **TC1-ConvNN.ipynb**
