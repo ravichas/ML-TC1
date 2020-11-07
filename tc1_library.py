@@ -28,7 +28,7 @@ def plot_unsupervised_learning_results(unsupervised_learning_results, labels):
 def run_and_plot_pca_and_tsne(X, y, top_n_features=500):
 	'''
 	Run PCA and tSNE analyses on data X and plot the results with marker color/style by known labels y.
-
+	
 	Note that tSNE takes long if using many features, so for tSNE we use the top-top_n_features-variance genes.
 	'''
 
