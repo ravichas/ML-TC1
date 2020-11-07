@@ -72,7 +72,7 @@ filters = 128
 filter_len = 20
 stride = 1
 
-K.clear_session()
+# K.clear_session()
 
 # from IPython.core.display import Image
 # Image(filename='Img/TC1-arch.png',width = 300, height = 400 )
