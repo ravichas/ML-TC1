@@ -2,6 +2,16 @@ backend: tensorflow
 class_name: Sequential
 config:
   layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple
+      - null
+      - 60483
+      - 1
+      dtype: float32
+      name: conv1d_input
+      ragged: false
+      sparse: false
   - class_name: Conv1D
     config:
       activation: linear
@@ -20,18 +30,16 @@ config:
       - 1
       dtype: float32
       filters: 128
+      groups: 1
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
       kernel_size: !!python/tuple
       - 20
-      name: conv1d_1
+      name: conv1d
       padding: valid
       strides: !!python/tuple
       - 1
@@ -65,18 +73,16 @@ config:
       dilation_rate: !!python/tuple
       - 1
       filters: 128
+      groups: 1
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
       kernel_size: !!python/tuple
       - 20
-      name: conv1d_2
+      name: conv1d_1
       padding: valid
       strides: !!python/tuple
       - 1
@@ -113,14 +119,11 @@ config:
       bias_regularizer: null
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_1
+      name: dense
       trainable: true
       units: 200
       use_bias: true
@@ -147,14 +150,11 @@ config:
       bias_regularizer: null
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_2
+      name: dense_1
       trainable: true
       units: 20
       use_bias: true
@@ -181,14 +181,11 @@ config:
       bias_regularizer: null
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_3
+      name: dense_2
       trainable: true
       units: 3
       use_bias: true
