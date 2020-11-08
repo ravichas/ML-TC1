@@ -1,1 +1,5 @@
 .vscode
+*.pkl
+*.h5
+__pycache__
+archive
