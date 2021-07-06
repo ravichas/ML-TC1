@@ -2,6 +2,16 @@ backend: tensorflow
 class_name: Sequential
 config:
   layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple
+      - null
+      - 60483
+      - 1
+      dtype: float32
+      name: conv1d_input
+      ragged: false
+      sparse: false
   - class_name: Conv1D
     config:
       activation: linear
@@ -20,18 +30,16 @@ config:
       - 1
       dtype: float32
       filters: 128
+      groups: 1
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
       kernel_size: !!python/tuple
       - 20
-      name: conv1d_1
+      name: conv1d
       padding: valid
       strides: !!python/tuple
       - 1
@@ -40,13 +48,11 @@ config:
   - class_name: Activation
     config:
       activation: relu
-      dtype: float32
       name: activation_1
       trainable: true
   - class_name: MaxPooling1D
     config:
       data_format: channels_last
-      dtype: float32
       name: max_pooling1d_1
       padding: valid
       pool_size: !!python/tuple
@@ -66,20 +72,17 @@ config:
       data_format: channels_last
       dilation_rate: !!python/tuple
       - 1
-      dtype: float32
       filters: 128
+      groups: 1
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
       kernel_size: !!python/tuple
       - 20
-      name: conv1d_2
+      name: conv1d_1
       padding: valid
       strides: !!python/tuple
       - 1
@@ -88,13 +91,11 @@ config:
   - class_name: Activation
     config:
       activation: relu
-      dtype: float32
       name: activation_2
       trainable: true
   - class_name: MaxPooling1D
     config:
       data_format: channels_last
-      dtype: float32
       name: max_pooling1d_2
       padding: valid
       pool_size: !!python/tuple
@@ -105,7 +106,6 @@ config:
   - class_name: Flatten
     config:
       data_format: channels_last
-      dtype: float32
       name: flatten_1
       trainable: true
   - class_name: Dense
@@ -117,29 +117,23 @@ config:
         class_name: Zeros
         config: {}
       bias_regularizer: null
-      dtype: float32
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_1
+      name: dense
       trainable: true
       units: 200
       use_bias: true
   - class_name: Activation
     config:
       activation: relu
-      dtype: float32
       name: activation_3
       trainable: true
   - class_name: Dropout
     config:
-      dtype: float32
       name: dropout_1
       noise_shape: null
       rate: 0.1
@@ -154,29 +148,23 @@ config:
         class_name: Zeros
         config: {}
       bias_regularizer: null
-      dtype: float32
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_2
+      name: dense_1
       trainable: true
       units: 20
       use_bias: true
   - class_name: Activation
     config:
       activation: relu
-      dtype: float32
       name: activation_4
       trainable: true
   - class_name: Dropout
     config:
-      dtype: float32
       name: dropout_2
       noise_shape: null
       rate: 0.1
@@ -191,25 +179,20 @@ config:
         class_name: Zeros
         config: {}
       bias_regularizer: null
-      dtype: float32
       kernel_constraint: null
       kernel_initializer:
-        class_name: VarianceScaling
+        class_name: GlorotUniform
         config:
-          distribution: uniform
-          mode: fan_avg
-          scale: 1.0
           seed: null
       kernel_regularizer: null
-      name: dense_3
+      name: dense_2
       trainable: true
       units: 3
       use_bias: true
   - class_name: Activation
     config:
       activation: softmax
-      dtype: float32
       name: activation_5
       trainable: true
   name: sequential_1
-keras_version: 2.3.1
+keras_version: 2.2.4
